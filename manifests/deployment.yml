@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: igoramorimcontainerisrunningazure 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: igoramorimcontainerisrunningazure
+  template:
+    metadata:
+      labels:
+        app: igoramorimcontainerisrunningazure 
+    spec:
+      containers:
+        - name: igoramorimcontainerisrunningazure 
+          image: racrtests.azurecr.io/igoramorimcontainerisrunningazure
+          ports:
+          - containerPort: 80
